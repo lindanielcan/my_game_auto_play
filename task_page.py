@@ -147,3 +147,5 @@ class ProgressPage(tk.Frame):
 
         self.canvas = tkinter.Canvas(self, width=500, height=2, bg="black")
         self.canvas.grid(row=1, column=0, columnspan=10, padx=0, pady=0)
+
+
