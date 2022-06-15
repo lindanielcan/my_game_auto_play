@@ -2,7 +2,6 @@ from start_page import StartPage
 from task_page import *
 
 
-
 class BotScreen(tk.Tk):
     # __init__ function for class tkinterApp
     def __init__(self, *args, **kwargs):
