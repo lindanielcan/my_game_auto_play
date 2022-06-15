@@ -1,6 +1,8 @@
 from start_page import StartPage
 from task_page import *
 
+
+
 class BotScreen(tk.Tk):
     # __init__ function for class tkinterApp
     def __init__(self, *args, **kwargs):
@@ -43,9 +45,5 @@ class BotScreen(tk.Tk):
         frame = self.frames[cont]
         frame.tkraise()
 
-
-
-
-
-
-
+    def show_progress_message(self, message):
+        self.frames[ProgressPage].text_box.insert('end', message)
