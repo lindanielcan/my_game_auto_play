@@ -1,5 +1,15 @@
-from datetime import datetime
+import pyautogui
+import time
 
-time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-print(time)
+time.sleep(2)
+print(pyautogui.position())
 
+pyautogui.scroll(-200)
+time.sleep(1)
+pyautogui.scroll(-200)
+time.sleep(1)
+
+# Point(x=660, y=296)
+# Point(x=1362, y=603)
+
+print()

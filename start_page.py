@@ -3,7 +3,6 @@ from tkinter import ttk
 from task_page import TaskPage
 
 
-
 # 欢迎使用页面。
 
 class StartPage(tk.Frame):
@@ -16,4 +15,3 @@ class StartPage(tk.Frame):
         button1 = ttk.Button(self, text="开始使用脚本",
                              command=lambda: controller.show_frame(TaskPage))
         button1.grid(row=1, column=0, padx=180, pady=10)
-

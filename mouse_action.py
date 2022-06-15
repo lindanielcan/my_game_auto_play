@@ -21,3 +21,5 @@ class MouseAction:
         time.sleep(randint(1000, 2000) / randint(1000, 2000))
         for a in range(0, number_of_clicks):
             pyautogui.click()
+
+
