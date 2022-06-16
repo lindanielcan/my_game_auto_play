@@ -28,14 +28,14 @@ class Bot:
         else:
             return False
 
-    def read_each_screen(self, method):
+    def read_each_screen(self, method=None):
         """iterate through each screen and perform a task."""
 
         for a in range(1, 6):
             if self.find_and_click('images/1.png', "Can't find the image. 无法找到该图片"):
                 # **********************************
                 screen_x_coordinates = [
-                    (self.mouse_actions.mouse_position[0] - 300),
+                    (self.mouse_actions.mouse_position[0] - 350),
                     (self.mouse_actions.mouse_position[0] - 150),
                     (self.mouse_actions.mouse_position[0]),
                     (self.mouse_actions.mouse_position[0] + 200),
@@ -52,7 +52,7 @@ class Bot:
                 # *************************************************************
                 # add task code here.
 
-                method()
+                # method()
 
                 # minimize each screen
                 self.find_and_click('images/minimize.png', "can not find the image")
@@ -87,7 +87,7 @@ class Bot:
             self.find_and_click('images/8.png')
             self.find_and_click('images/9.png')
 
-    def check_for_image_while_scrolling(self, image, mouse_move_to_this_position):
+    def check_for_image_while_scrolling(self, mouse_move_to_this_position, image1='', image2=''):
 
         time.sleep(randint(1000, 2000) / randint(1000, 2000))
 
@@ -103,17 +103,16 @@ class Bot:
 
         while True:
             time.sleep(randint(1000, 2000) / randint(1000, 2000))
-            if self.find_and_click(image):
+            if self.find_and_click(image1):
+                if image2 != '':
+                    self.find_and_click(image2)
                 return True
             pyautogui.scroll(-200)
 
     def get_wish_task(self):
         """祈福"""
 
-        if self.find_and_click('images/10.png'):
-            if self.find_and_click('images/11.png'):
-
-
+        pass
 
 # time.sleep(2)
 # print(pyautogui.position())
@@ -125,3 +124,5 @@ class Bot:
 # # 3. Point(x=1055, y=974)
 # # 4.
 # # 5.
+# Point(x=663, y=367)
+# Point(x=1197, y=714)
